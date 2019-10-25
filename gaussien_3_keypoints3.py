@@ -355,7 +355,7 @@ def train_net(n_epochs):
             ########## Target: (N) where each value is 0≤targets[i]≤C−1
             ########## Output: scalar
             #prob = preprocessing.minmax_scale(prob_3d,feature_range=(0, 1))
-            prob = torch.from_numpy(prob_3d)
+            prob = torch.from_numpy(prob)
             prob = Variable(prob.long())
             prob = prob.squeeze_()
             out = out.squeeze_()
